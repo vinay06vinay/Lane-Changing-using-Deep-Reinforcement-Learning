@@ -22,7 +22,7 @@ def ppo_train(args):
             policy_kwargs=dict(net_arch=[dict(pi=[256, 256], vf=[256, 256])]),
             n_steps=batch_size * 12 // n_cpu,
             batch_size=batch_size,
-            n_epochs=20,
+            n_epochs=60,
             learning_rate=learning_rate,
             gamma=0.8,
             verbose=2,
@@ -34,7 +34,7 @@ def ppo_train(args):
     del model
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Train DQN model for highway Lane Changing Environment environment')
-    parser.add_argument('--time-steps', type=int, default=300, help='Number of training time steps')
-    parser.add_argument('--learning-rate', type=float, default=1e-4, help='Learning rate for DQN')
+    parser.add_argument('--time-steps', type=int, default=1000, help='Number of training time steps')
+    parser.add_argument('--learning-rate', type=float, default=2e-5, help='Learning rate for DQN')
     args = parser.parse_args()
     ppo_train(args)

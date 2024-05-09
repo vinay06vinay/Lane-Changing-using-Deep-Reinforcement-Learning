@@ -57,7 +57,7 @@ python3 highway_lane_train_ppo.py --time-steps 1000 --learning-rate 1e-4
 python3 highway_lane_test_ppo.py
 ```
 
-**Results**: You can see the agent running on the customly created highway environment. The logs can be found in "highway_ppo/" if you have tensorboard setup
+**Results**: You can see the agent running on the customly created highway environment. The logs can be found in "highway_ppo/" if you have tensorboard setup. All the results videos can be found in the result video of the repository folder.
 
 
 ## References & Credits
