@@ -32,7 +32,10 @@ def register_highway_envs():
         id="highway-v0",
         entry_point="highway_env.envs:HighwayEnv",
     )
-
+    register(
+        id="highway-lane-v0",
+        entry_point="highway_env.envs:HighwayEnvLane",
+    )
     register(
         id="highway-fast-v0",
         entry_point="highway_env.envs:HighwayEnvFast",

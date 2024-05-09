@@ -84,7 +84,7 @@ class TwoWayEnv(AbstractEnv):
             StraightLane(
                 [0, 0],
                 [length, 0],
-                line_types=(LineType.CONTINUOUS_LINE, LineType.STRIPED),
+                line_types=(LineType.CONTINUOUS_LINE, LineType.CONTINUOUS_LINE),
             ),
         )
         net.add_lane(
