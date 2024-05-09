@@ -25,6 +25,9 @@ conda create --name enpm690
 conda activate enpm690
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 cd Lane-Changing-using-Deep-Reinforcement-Learning
+pip install highway-env
+pip install stable_baselines3
+pip install gymnasium
 ```
 
 
