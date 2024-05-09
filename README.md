@@ -17,6 +17,7 @@ conda init
 ```
 3. Clone the below repository 
 ```bash
+cd ..
 git clone https://github.com/vinay06vinay/Lane-Changing-using-Deep-Reinforcement-Learning.git
 ```
 4. Create a new Conda environment with below dependencies. For Pytorch dependencies based on your system refer to Website [Pytorch](https://pytorch.org/get-started/locally/)
@@ -29,7 +30,7 @@ pip install highway-env
 pip install stable_baselines3
 pip install gymnasium
 ```
-
+5. Make sure tensorboard is installed
 
 ### Instructions to Train and Test the Code:
 
@@ -37,9 +38,11 @@ pip install gymnasium
 
 1. To train the DQN Agent run the below command with learning rate and timesteps as per convenience
 ```bash
+ python3 highway_lane_train_dqn.py --time-steps 1000 --learning-rate 1e-4
 ```
 2. The folder "highway_dqn/model" contains Weights for already tested DQN model. You can test it using below command
 ```bash
+python3 highway_lane_test_dqn.py
 ```
 **Results**: You can see the agent running on the customly created highway environment. The logs can be found in "tensorboard_logs/" if you have tensorboard setup
 
@@ -47,9 +50,11 @@ pip install gymnasium
 
 1. To train the PPO Agent run the below command with learning rate and timesteps as per convenience
 ```bash
+python3 highway_lane_train_ppo.py --time-steps 1000 --learning-rate 1e-4
 ```
 2. The folder "highway_ppo/" contains Weights for already tested DQN model. You can test it using below command
 ```bash
+python3 highway_lane_test_ppo.py
 ```
 
 **Results**: You can see the agent running on the customly created highway environment. The logs can be found in "highway_ppo/" if you have tensorboard setup
